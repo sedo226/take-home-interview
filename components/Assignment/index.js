@@ -6,6 +6,7 @@ import Score from "./Score";
 //helpers
 import { canSubmit } from "./helpers/canSubmit";
 import SubmitButton from "./SubmitButton";
+import moment from "moment";
 
 export default function Assignment({ assignment }) {
   const showSubmitButton = canSubmit(assignment);
@@ -15,7 +16,7 @@ export default function Assignment({ assignment }) {
         <div className="basic-flex-container flex-justify-content-space-between">
           <h2>{assignment.assignmentName}</h2>
           <div className="assignment-due-date">
-            DUE DATE: {assignment.dueDate}
+            DUE DATE: {moment(assignment.dueDate).format("MM/DD/YYYY")}
           </div>
         </div>
         <div>STATUS: {assignment.assignmentStatus}</div>
