@@ -13,7 +13,7 @@ export default (req, res) => {
     {
       id: 789,
       assignmentName: "Assignment 5",
-      assignmentStatus: "To Do",
+      assignmentStatus: "Not Submitted",
       dueDate: "2021-02-11",
       studentID: 1,
       score: null,
@@ -22,7 +22,7 @@ export default (req, res) => {
       id: 101112,
       assignmentName: "Assignment 2",
       assignmentStatus: "Submitted",
-      dueDate: "2021-02-08",
+      dueDate: "2021-01-07",
       studentID: 1,
       score: 65,
     },
@@ -37,8 +37,8 @@ export default (req, res) => {
     {
       id: 123,
       assignmentName: "Assignment 1",
-      assignmentStatus: "To Do",
-      dueDate: "2021-01-07",
+      assignmentStatus: "Not Submitted",
+      dueDate: "2021-01-05",
       studentID: 1,
       score: null,
     },

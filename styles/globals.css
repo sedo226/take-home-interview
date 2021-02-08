@@ -43,6 +43,16 @@ div.card-container > div:not(:last-of-type) {
   margin-bottom: 16px;
 }
 
+.assignment-missed {
+  font-weight: 500;
+  padding: 6px 8px;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: rgb(177, 177, 177);
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
 button.assignment-submit-button {
   position: absolute;
   right: 8px;

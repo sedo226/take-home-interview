@@ -20,12 +20,17 @@ export default function Assignment({ assignment }) {
         </div>
         <div>STATUS: {assignment.assignmentStatus}</div>
         {assignment.assignmentStatus === "Submitted" && (
-          <Score score={assignment.score} />
+          <div data-testid="assignment-score">
+            <Score score={assignment.score} />
+          </div>
+        )}
+        {!showSubmitButton && assignment.assignmentStatus !== "Submitted" && (
+          <span className="assignment-missed">MISSED ASSIGNMENT</span>
         )}
         {showSubmitButton && (
-          <div data-testid="assignment-submit-button">
+          <span data-testid="assignment-submit-button">
             <SubmitButton assignmentStatus={assignment.assignmentStatus} />
-          </div>
+          </span>
         )}
       </Paper>
     </Grid>

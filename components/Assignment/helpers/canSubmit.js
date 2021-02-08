@@ -3,7 +3,7 @@ import moment from "moment";
 /* Can Submit IF:
 - assignment.assignmentStatus === "Submitted" && assignment.score < 80 && assignment.dueDate <= 30 days ago
 OR
-- assignment.assignmentStatus === "To Do" && assignment.dueDate <= 30 days ago
+- assignment.assignmentStatus === "Not Submitted" && assignment.dueDate <= 30 days ago
 */
 
 export const canSubmit = (assignment) => {
@@ -19,7 +19,7 @@ export const canSubmit = (assignment) => {
     canSubmit = true;
   }
   if (
-    assignment.assignmentStatus === "To Do" &&
+    assignment.assignmentStatus === "Not Submitted" &&
     !dueDateIsMoreThanThirtyDaysAgo
   ) {
     canSubmit = true;
