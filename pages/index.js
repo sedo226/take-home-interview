@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Assignment from "./Assignment/index.js";
+import Assignment from "../components/Assignment/index.js";
 import Grid from "@material-ui/core/Grid";
 
 export default function App({ data }) {

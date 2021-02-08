@@ -7,7 +7,7 @@ import Score from "./Score";
 import { canSubmit } from "./helpers/canSubmit";
 import SubmitButton from "./SubmitButton";
 
-export default function Assignments({ assignment }) {
+export default function Assignment({ assignment }) {
   const showSubmitButton = canSubmit(assignment);
   return (
     <Grid item xs={12}>
@@ -23,7 +23,9 @@ export default function Assignments({ assignment }) {
           <Score score={assignment.score} />
         )}
         {showSubmitButton && (
-          <SubmitButton assignmentStatus={assignment.assignmentStatus} />
+          <div data-testid="assignment-submit-button">
+            <SubmitButton assignmentStatus={assignment.assignmentStatus} />
+          </div>
         )}
       </Paper>
     </Grid>
