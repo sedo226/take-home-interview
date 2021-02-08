@@ -7,23 +7,23 @@ import Score from "./Score";
 import { canSubmit } from "./helpers/canSubmit";
 import SubmitButton from "./SubmitButton";
 
-export default function Assignments(props) {
-  const showSubmitButton = canSubmit(props.assignment);
+export default function Assignments({ assignment }) {
+  const showSubmitButton = canSubmit(assignment);
   return (
     <Grid item xs={12}>
       <Paper className="card-container">
         <div className="basic-flex-container flex-justify-content-space-between">
-          <h2>{props.assignment.assignmentName}</h2>
+          <h2>{assignment.assignmentName}</h2>
           <div className="assignment-due-date">
-            DUE DATE: {props.assignment.dueDate}
+            DUE DATE: {assignment.dueDate}
           </div>
         </div>
-        <div>STATUS: {props.assignment.assignmentStatus}</div>
-        {props.assignment.assignmentStatus === "Submitted" && (
-          <Score score={props.assignment.score} />
+        <div>STATUS: {assignment.assignmentStatus}</div>
+        {assignment.assignmentStatus === "Submitted" && (
+          <Score score={assignment.score} />
         )}
         {showSubmitButton && (
-          <SubmitButton assignmentStatus={props.assignment.assignmentStatus} />
+          <SubmitButton assignmentStatus={assignment.assignmentStatus} />
         )}
       </Paper>
     </Grid>

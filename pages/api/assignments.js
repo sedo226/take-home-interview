@@ -38,7 +38,7 @@ export default (req, res) => {
       id: 123,
       assignmentName: "Assignment 1",
       assignmentStatus: "To Do",
-      dueDate: "2021-01-08",
+      dueDate: "2021-01-07",
       studentID: 1,
       score: null,
     },
